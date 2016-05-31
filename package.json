@@ -1,0 +1,35 @@
+{
+  "name": "roboter-cli",
+  "version": "0.0.0",
+  "description": "roboter-cli is the CLI for roboter.",
+  "contributors": [
+    {
+      "name": "Golo Roden",
+      "email": "golo.roden@thenativeweb.io"
+    },
+    {
+      "name": "Matthias Wagler",
+      "email": "matthias.wagler@thenativeweb.io"
+    }
+  ],
+  "bin": {
+    "bot": "bin/roboterCli.js"
+  },
+  "dependencies": {
+    "buntstift": "0.4.0",
+    "minimist": "1.2.0",
+    "shelljs": "0.7.0"
+  },
+  "devDependencies": {
+    "roboter": "0.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/roboter-cli.git"
+  },
+  "keywords": [
+    "build",
+    "gulp"
+  ],
+  "license": "MIT"
+}
