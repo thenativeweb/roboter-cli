@@ -6,4 +6,4 @@ machine:
 
 test:
   override:
-    - npm run analyze
+    - ./bin/roboterCli.js build-server
