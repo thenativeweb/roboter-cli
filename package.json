@@ -19,10 +19,10 @@
     "buntstift": "0.4.0",
     "commander": "2.9.0",
     "minimist": "1.2.0",
-    "shelljs": "0.7.0"
+    "shelljs": "0.7.3"
   },
   "devDependencies": {
-    "roboter": "0.7.1"
+    "roboter": "0.11.14"
   },
   "repository": {
     "type": "git",
