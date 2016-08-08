@@ -7,30 +7,27 @@ const fs = require('fs'),
 
 const buntstift = require('buntstift'),
       minimist = require('minimist'),
+      program = require('commander'),
       shell = require('shelljs');
 
-if (process.argv[2] === '--help') {
-  buntstift.info('roboter  - automate your builds');
-  buntstift.newLine();
-  buntstift.info('Usage:');
-  buntstift.info('  bot [command]');
-  buntstift.newLine();
-  buntstift.info('Available Commands:');
-  buntstift.info('  analyse            run static code analysis');
-  buntstift.info('  build-client       build a client application');
-  buntstift.info('  build-server       build a server application');
-  buntstift.info('  coverage           calculate test coverage');
-  buntstift.info('  license            verify licenses');
-  buntstift.info('  outdated           detect outdated packages');
-  buntstift.info('  publish            publish a new version');
-  buntstift.info('  test               run unit and integration tests');
-  buntstift.info('  test-integration   run integration tests');
-  buntstift.info('  test-units         run unit tests');
-  buntstift.info('  update             update outdated packages');
-  buntstift.info('  watch-client       continuously build a client application');
-  buntstift.info('  watch-server       continuously build a server application');
-  buntstift.exit(0);
-}
+const packageJson = require('../package.json');
+
+program.
+  version(packageJson.version).
+  command('analyse', 'run static code analysis').
+  command('build-client', 'build a client application').
+  command('build-server', 'build a server application').
+  command('coverage', 'calculate test coverage').
+  command('license', 'verify licenses').
+  command('outdated', 'detect outdated packages').
+  command('publish', 'publish a new version').
+  command('test', 'run unit and integration tests').
+  command('test-integration', 'run integration tests').
+  command('test-units', 'run unit tests').
+  command('update', 'update outdated packages').
+  command('watch-client', 'continuously build a client application').
+  command('watch-server', 'continuously build a server application').
+  parse(process.argv);
 
 /* eslint-disable no-sync */
 if (!fs.existsSync(path.join(process.cwd(), 'node_modules', 'roboter'))) {

@@ -13,10 +13,11 @@
     }
   ],
   "bin": {
-    "bot": "bin/roboterCli.js"
+    "bot": "bin/bot.js"
   },
   "dependencies": {
     "buntstift": "0.4.0",
+    "commander": "2.9.0",
     "minimist": "1.2.0",
     "shelljs": "0.7.0"
   },
