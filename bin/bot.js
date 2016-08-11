@@ -23,6 +23,19 @@ const run = function () {
     buntstift.exit(1);
   }
 
+  if (
+    !fs.existsSync(path.join(process.cwd(), 'node_modules', 'roboter-server')) &&
+    !fs.existsSync(path.join(process.cwd(), 'node_modules', 'roboter-client'))
+  ) {
+    buntstift.error('Neither roboter-server nor roboter-client is installed locally.');
+    buntstift.newLine();
+    buntstift.info('Please run one of the following commands, depending on your environment:');
+    buntstift.newLine();
+    buntstift.info('  npm install roboter-server --save-dev --save-exact');
+    buntstift.info('  npm install roboter-client --save-dev --save-exact');
+    buntstift.exit(1);
+  }
+
   const gulp = path.join(process.cwd(), 'node_modules', '.bin', 'gulp');
 
   if (!fs.existsSync(gulp)) {
