@@ -22,7 +22,8 @@
     "shelljs": "0.7.3"
   },
   "devDependencies": {
-    "roboter": "0.11.14"
+    "roboter": "0.12.0",
+    "roboter-server": "0.12.0"
   },
   "repository": {
     "type": "git",
