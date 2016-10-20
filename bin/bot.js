@@ -70,32 +70,22 @@ if (process.argv.length === 2) {
   run();
 }
 
+/* eslint-disable newline-per-chained-call */
 program.
   version(packageJson.version).
-  command('analyse', 'run static code analysis').
-  action(run).
-  command('build-client', 'build a client application').
-  action(run).
-  command('build-server', 'build a server application').
-  action(run).
-  command('coverage', 'calculate test coverage').
-  action(run).
-  command('license', 'verify licenses').
-  action(run).
-  command('outdated', 'detect outdated packages').
-  action(run).
-  command('publish', 'publish a new version').
-  action(run).
-  command('test', 'run unit and integration tests').
-  action(run).
-  command('test-integration', 'run integration tests').
-  action(run).
-  command('test-units', 'run unit tests').
-  action(run).
-  command('update', 'update outdated packages').
-  action(run).
-  command('watch-client', 'continuously build a client application').
-  action(run).
-  command('watch-server', 'continuously build a server application').
-  action(run).
+  command('analyse', 'run static code analysis').action(run).
+  command('build-client', 'build a client application').action(run).
+  command('build-server', 'build a server application').action(run).
+  command('coverage', 'calculate test coverage').action(run).
+  command('generate-toc', 'generate TOC in README.md').action(run).
+  command('license', 'verify licenses').action(run).
+  command('outdated', 'detect outdated packages').action(run).
+  command('publish', 'publish a new version').action(run).
+  command('test', 'run unit and integration tests').action(run).
+  command('test-integration', 'run integration tests').action(run).
+  command('test-units', 'run unit tests').action(run).
+  command('update', 'update outdated packages').action(run).
+  command('watch-client', 'continuously build a client application').action(run).
+  command('watch-server', 'continuously build a server application').action(run).
   parse(process.argv);
+/* eslint-enable newline-per-chained-call */
